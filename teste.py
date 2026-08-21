@@ -9,4 +9,3 @@ class Person:
 Jão = Person("João", 21, 1.80, 70, "Masculine")
 print(f"My name is {Jão.name}, i'm {Jão.age} years old, I weigh {Jão.weigth} kg end I am {Jão.higth} cm tall.")
 
-
