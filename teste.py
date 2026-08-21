@@ -11,3 +11,6 @@ print(f"My name is {Jão.name}, i'm {Jão.age} years old, I weigh {Jão.weigth} 
 
 Eva = Person("Eva", 45, 1.60, 60, "Feminine")
 print(f"My name is {Eva.name}, i'm {Jão.age} years old, I weigh {Eva.weigth} kg end I am {Eva.higth} cm tall.")
+
+Ana = Person("Ana", 23, 1.65, 56, "feminine")
+print(f"My name is {Ana.name}, i'm {Ana.age} years old, I weigh {Ana.weigth} kg end I am {Ana.higth} cm tall.")
