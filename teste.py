@@ -1,3 +1,4 @@
+"""
 class Person: 
     def __init__(self, name, age, higth, weigth, gender):
         self.name = name
@@ -14,3 +15,22 @@ print(f"My name is {Eva.name}, i'm {Jão.age} years old, I weigh {Eva.weigth} kg
 
 Ana = Person("Ana", 23, 1.65, 56, "feminine")
 print(f"My name is {Ana.name}, i'm {Ana.age} years old, I weigh {Ana.weigth} kg end I am {Ana.higth} cm tall.")
+"""
+
+"""
+frutas = []
+frutas.append("maçã")
+frutas.append("banana")
+frutas.append("laranja")
+print(frutas)
+ultima = frutas.pop()
+#print(ultima)
+"""
+
+"""
+import time
+for i in range(10):
+    print(i)
+    #time.sleep(1)
+"""
+
