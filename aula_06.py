@@ -17,7 +17,9 @@ class Node:
 class LinkedList:
     # Cria a lista inicialmente vazia.
     def __init__(self):
-        self.first = None   # 'first' (ou cabeça/head) indica quem é o primeiro Nó da lista. 
+        self.first = None   # 'first' (ou cabeça/head) indica quem é o primeiro Nó da lista.
+        self.last = None
+        self.size = 0
 
     # ==========================================
     # BLOCO 3: Método de Inserção
@@ -25,16 +27,31 @@ class LinkedList:
     def insert(self, data):
 
         newNode = Node(data)  # Cria um novo Nó com o dado que queremos inserir.
-
+        self.size += 1          # Incrementa o tamanho da lista.
         if (self.isEmpty()):             # Checa se a lista está vazia.
-            self.first = newNode      # Se sim, o primeiro elemento da lista passa a ser este novo Nó.
+            self.first = self.last = newNode      # Se sim, o primeiro elemento da lista passa a ser este novo Nó.
             return
 
-        # se a lista não estiver vazia, precisamos percorrer a lista até o último elemento e insere no final.
-        temp = self.first
-        while (temp.next != None):      # Enquanto houver um próximo elemento...
-            temp = temp.next             # ...passa para o próximo elemento.
-        temp.next = Node(data)          # Adiciona o novo nó no final da lista.
+        self.last.next = self.last = newNode  # Se não, o último elemento da lista aponta para este novo Nó e o último elemento passa a ser este novo Nó.
+
+    def remove(self):
+        if (self.isEmpty()):
+            print("Lista vazia. Não há elementos para remover.")
+            return
+
+        if (self.size == 1):
+            copy = self.last 
+            self.last = self.first = None
+            self.size -= 1
+            return copy.data 
+
+
+        
+        while self.first.next != self.last:
+            self.first = self.first.next
+
+            
+                
 
     #imprime lista
     def printList(self):
@@ -63,4 +80,9 @@ list.insert("Ana")       # Adiciona o primeiro elemento da lista.
 list.insert("Beto")      # Adiciona o segundo elemento da lista.
 list.insert("Carlos")    # Adiciona o terceiro elemento da lista.
 list.insert("Layla")     # Adiciona o quarto elemento da lista.
+list.remove()  # Remove o primeiro elemento da lista.
+list.remove()  # Remove o segundo elemento da lista.
+list.remove()
+
+
 list.printList()  # Imprime todos os elementos da lista.
