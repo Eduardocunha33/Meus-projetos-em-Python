@@ -70,7 +70,6 @@ class BinaryTree:
             self.postOrderRecursive(node.right)  
             print(node.value, end=" ")         
 
-# --- TESTANDO O CÓDIGO ---
 
 tree = BinaryTree()
 
