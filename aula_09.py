@@ -78,11 +78,11 @@ values = [8, 3, 1, 5, 2, 15, 11, 16]
 for val in values:
     tree.insert(val)
 
-print("Pré-ordem:")
+print("Pre-order:")
 tree.preOrder()
 
-print("\nEm-ordem:")
+print("\nIn-order:")
 tree.inOrder()
 
-print("\nPós-ordem:")
+print("\nPost-order:")
 tree.postOrder()
